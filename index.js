@@ -3,7 +3,9 @@ const app = express();
 const morgan = require('morgan');
 
 // app.use allows us to run code on every single request
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
+
+
 
 // app.use(()=>{
 //     console.log('HEY!')
