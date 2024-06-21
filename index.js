@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 
 // Add a basic route
 app.get('/', (req, res) => {
