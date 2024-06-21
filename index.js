@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
-app.use(()=>{
-    console.log('HEY!')
-})
+// app.use(()=>{
+//     console.log('HEY!')
+// })
 
 // Add a basic route
 app.get('/', (req, res) => {
