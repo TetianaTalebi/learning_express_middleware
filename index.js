@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
     res.send('Home page')
 })
 
+app.get('/dogs', (req, res) => {
+    res.send('Woof! Woof!')
+})
+
 
 // Start a web server and listen to the connections on the specified local host
 app.listen(3000, () => {
