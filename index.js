@@ -7,8 +7,9 @@ const morgan = require('morgan');
 
 app.use(morgan('common'));
 
-app.use((req, res) =>{
-    res.send('Hijacked by my app.use!!!!')
+app.use((req, res, next) =>{
+    res.send('Hijacked by my app.use!!!!');
+    next();
 })
 
 // app.use(()=>{
