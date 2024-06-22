@@ -7,6 +7,10 @@ const morgan = require('morgan');
 
 app.use(morgan('common'));
 
+app.use((req, res) =>{
+    res.send('Hijacked by my app.use!!!!')
+})
+
 // app.use(()=>{
 //     console.log('HEY!')
 // })
