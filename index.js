@@ -12,6 +12,11 @@ app.use((req, res, next) => {
     next()
 })
 
+app.use((req, res, next) => {
+    console.log('This is my second middleware!');
+    next()
+})
+
 // app.use((req, res, next) =>{
 //     res.send('Hijacked by my app.use!!!!');
 //     next();
