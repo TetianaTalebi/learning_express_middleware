@@ -10,6 +10,7 @@ app.use(morgan('common'));
 app.use((req, res, next) => {
     console.log('This is my first middleware!');
     next()
+    console.log('This is my first middleware after calling next')
 })
 
 app.use((req, res, next) => {
