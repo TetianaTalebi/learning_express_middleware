@@ -9,6 +9,8 @@ app.use(morgan('common'));
 
 app.use((req, res, next) => {
     console.log('This is my first middleware!');
+    // We use return to be on the safe side
+    // The code after 'return' does NOT run
     return next()
     console.log('This is my first middleware after calling next')
 })
