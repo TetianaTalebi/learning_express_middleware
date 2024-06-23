@@ -10,7 +10,9 @@ app.use(morgan('tiny'));
 // We would like to recreate what Morgan middleware (Node package) does
 
 app.use((req, res, next) => {
-    console.log(req.method.toUpperCase());
+    //req.method = 'DELETE';
+    req.requestTime = Date.now();
+    console.log(req.method.toUpperCase(), req.path, req.requestTime);
     return next()
 })
 
