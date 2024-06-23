@@ -7,6 +7,11 @@ app.use(morgan('tiny'));
 
 // app.use(morgan('common'));
 
+app.use((req, res, next) => {
+    console.log(req.method);
+    return next()
+})
+
 // app.use((req, res, next) => {
 //     console.log('This is my first middleware!');
 //     // We use return to be on the safe side
