@@ -47,6 +47,8 @@ app.use((req, res, next) => {
 
 // Add a basic route
 app.get('/', (req, res) => {
+    // An example of decorating our request object
+    console.log(`Request date: ${req.requestTime}`)
     res.send('Home page')
 })
 
