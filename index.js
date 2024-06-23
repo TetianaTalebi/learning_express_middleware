@@ -7,23 +7,23 @@ const morgan = require('morgan');
 
 app.use(morgan('common'));
 
-app.use((req, res, next) => {
-    console.log('This is my first middleware!');
-    // We use return to be on the safe side
-    // The code after 'return' does NOT run
-    return next()
-    console.log('This is my first middleware after calling next')
-})
+// app.use((req, res, next) => {
+//     console.log('This is my first middleware!');
+//     // We use return to be on the safe side
+//     // The code after 'return' does NOT run
+//     return next()
+//     console.log('This is my first middleware after calling next')
+// })
 
-app.use((req, res, next) => {
-    console.log('This is my second middleware!');
-    return next()
-})
+// app.use((req, res, next) => {
+//     console.log('This is my second middleware!');
+//     return next()
+// })
 
-app.use((req, res, next) => {
-    console.log('This is our third middleware!!!');
-    return next()
-})
+// app.use((req, res, next) => {
+//     console.log('This is our third middleware!!!');
+//     return next()
+// })
 
 
 
