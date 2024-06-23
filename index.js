@@ -3,9 +3,9 @@ const app = express();
 const morgan = require('morgan');
 
 // app.use allows us to run code on every single request
-// app.use(morgan('tiny'));
+app.use(morgan('tiny'));
 
-app.use(morgan('common'));
+// app.use(morgan('common'));
 
 // app.use((req, res, next) => {
 //     console.log('This is my first middleware!');
