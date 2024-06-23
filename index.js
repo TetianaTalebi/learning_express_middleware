@@ -7,6 +7,8 @@ app.use(morgan('tiny'));
 
 // app.use(morgan('common'));
 
+// We would like to recreate what Morgan middleware (Node package) does
+
 app.use((req, res, next) => {
     console.log(req.method);
     return next()
