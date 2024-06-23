@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/dogs', (req, res) => {
+    console.log(`Request time: ${req.requestTime}`);
     res.send('Woof! Woof!')
 })
 
