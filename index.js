@@ -20,6 +20,13 @@ app.use((req, res, next) => {
     return next()
 })
 
+app.use((req, res, next) => {
+    console.log('This is our third middleware!!!');
+    return next()
+})
+
+
+
 // app.use((req, res, next) =>{
 //     res.send('Hijacked by my app.use!!!!');
 //     next();
