@@ -52,15 +52,22 @@ app.use('/dogs', (req, res, next) => {
 // })
 
 // Add a basic route
-app.get('/', (req, res) => {
-    // An example of decorating our request object
-    console.log(`Request date: ${req.requestTime}`)
-    res.send('Home page')
-})
+// app.get('/', (req, res) => {
+//     // An example of decorating our request object
+//     console.log(`Request date: ${req.requestTime}`)
+//     res.send('Home page')
+// })
 
 app.get('/dogs', (req, res) => {
     console.log(`Request time: ${req.requestTime}`);
     res.send('Woof! Woof!')
+})
+
+// This middleware runs ONLY in case if no path matches
+// In this case we don't need to use next()
+
+app.use((req, res) => {
+    res.send('Not Found!!!')
 })
 
 
