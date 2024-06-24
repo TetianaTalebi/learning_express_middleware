@@ -22,6 +22,11 @@ app.use('/dogs', (req, res, next) => {
     next();
 })
 
+app.use((req, res, next) => {
+    console.log(req.query);
+    next();
+})
+
 // app.use((req, res, next) => {
 //     console.log('This is my first middleware!');
 //     // We use return to be on the safe side
