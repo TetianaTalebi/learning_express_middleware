@@ -67,7 +67,9 @@ app.get('/dogs', (req, res) => {
 // In this case we don't need to use next()
 
 app.use((req, res) => {
-    res.send('Not Found!!!')
+    // res.send('Not Found!!!')
+    res.status(404).send('Not Found!!!')
+
 })
 
 
