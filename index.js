@@ -15,6 +15,10 @@ app.use((req, res, next) => {
     console.log(req.method.toUpperCase(), req.path, req.requestTime);
     return next()
 })
+app.use('/dogs', (req, res, next) => {
+    console.log("I love dogs!");
+    next();
+})
 
 // app.use((req, res, next) => {
 //     console.log('This is my first middleware!');
@@ -58,7 +62,9 @@ app.get('/dogs', (req, res) => {
 })
 
 
+
 // Start a web server and listen to the connections on the specified local host
 app.listen(3000, () => {
     console.log('App is running on local host 3000!!!')
 })
+
