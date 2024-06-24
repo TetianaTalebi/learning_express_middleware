@@ -15,6 +15,8 @@ app.use((req, res, next) => {
     console.log(req.method.toUpperCase(), req.path, req.requestTime);
     return next()
 })
+
+// This middleware runs on every type of request: PUT, POST, DELETE, GET, etc.
 app.use('/dogs', (req, res, next) => {
     console.log("I love dogs!");
     next();
