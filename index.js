@@ -83,7 +83,7 @@ app.get('/dogs', (req, res) => {
     res.send('Woof! Woof!')
 })
 
-app.get('/secret', (req, res) => {
+app.get('/secret', verifyPassword, (req, res) => {
     res.send('The secret is...')
 })
 
