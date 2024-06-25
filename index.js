@@ -22,6 +22,8 @@ app.use('/dogs', (req, res, next) => {
     next();
 })
 
+// Not real auth with req.query object
+
 app.use((req, res, next) => {
     console.log(req.query);
     next();
