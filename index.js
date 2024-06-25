@@ -75,6 +75,10 @@ app.get('/dogs', (req, res) => {
     res.send('Woof! Woof!')
 })
 
+app.get('/secret', (req, res) => {
+    res.send('The secret is...')
+})
+
 // This middleware runs ONLY in case if no path matches
 // In this case we don't need to use next()
 
