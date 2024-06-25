@@ -25,14 +25,14 @@ app.use('/dogs', (req, res, next) => {
 // Not real auth with req.query object
 // It is a JOKE AUTHENTICATION !!! Not real!!!
 
-app.use((req, res, next) => {
-    const { password } = req.query;
-    if (password === 'pickles'){
-        next();
-    }
-    // console.log(req.query);
-    res.send('Sorry, you need a password!!!')
-})
+// app.use((req, res, next) => {
+//     const { password } = req.query;
+//     if (password === 'pickles'){
+//         next();
+//     }   
+//     // console.log(req.query);
+//     res.send('Sorry, you need a password!!!')
+// })
 
 // app.use((req, res, next) => {
 //     console.log('This is my first middleware!');
