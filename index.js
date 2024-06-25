@@ -2,6 +2,14 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
+const verifyPassword = (req, res, next) => {
+    const {password} = req.query;
+    if (password === 'pickles'){
+        next();
+    }
+    res.send('Sorry, you need a password!!!')
+}
+
 // app.use allows us to run code on every single request
 app.use(morgan('tiny'));
 
