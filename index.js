@@ -78,7 +78,7 @@ app.use('/dogs', (req, res, next) => {
 //     res.send('Home page')
 // })
 
-app.get('/dogs', (req, res) => {
+app.get('/dogs', verifyPassword, (req, res) => {
     console.log(`Request time: ${req.requestTime}`);
     res.send('Woof! Woof!')
 })
